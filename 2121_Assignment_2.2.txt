@@ -1,0 +1,1434 @@
+yasin786@yasin:~/2121$ touch emp1 emp2 emp3 emp4 emp5
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+├── emp2
+├── emp3
+├── emp4
+└── emp5
+
+9 directories, 5 files
+================================================================================
+yasin786@yasin:~/2121$ cat > emp1
+emp_no    
+name
+salary
+yasin786@yasin:~/2121$ cat emp1
+emp_no
+name
+salary
+================================================================================
+yasin786@yasin:~/2121$ rm -i emp2 emp3 emp4
+rm: remove regular empty file 'emp2'? y
+rm: remove regular empty file 'emp3'? y
+rm: remove regular empty file 'emp4'? y
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+└── emp5
+
+9 directories, 2 files
+================================================================================
+yasin786@yasin:~/2121$ touch alpha1 apple
+yasin786@yasin:~/2121$ tree
+.
+├── alpha1
+├── apple
+├── B1
+│   ├── M1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+└── emp5
+
+9 directories, 4 files
+yasin786@yasin:~/2121$ rm -i a*
+rm: remove regular empty file 'alpha1'? y
+rm: remove regular empty file 'apple'? y
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+└── emp5
+
+9 directories, 2 files
+================================================================================
+yasin786@yasin:~/2121$ touch dcst /M1/ 
+touch: setting times of '/M1/': No such file or directory
+yasin786@yasin:~/2121$ touch dcst /B1/M1/ 
+touch: cannot touch '/B1/M1/': No such file or directory
+yasin786@yasin:~/2121$ touch dcst B1/M1/ 
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── dcst
+├── emp1
+└── emp5
+
+9 directories, 3 files
+yasin786@yasin:~/2121$ rm dcst
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+└── emp5
+
+9 directories, 2 files
+yasin786@yasin:~/2121$ pwd
+/home/yasin786/2121
+yasin786@yasin:~/2121$ touch dcst B1/M1/ 
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── dcst
+├── emp1
+└── emp5
+
+9 directories, 3 files
+yasin786@yasin:~/2121$ rm dcst
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+└── emp5
+
+9 directories, 2 files
+yasin786@yasin:~/2121$ touch dcst /B1/M1/ 
+touch: cannot touch '/B1/M1/': No such file or directory
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── dcst
+├── emp1
+└── emp5
+
+9 directories, 3 files
+yasin786@yasin:~/2121$ rm dcst
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+└── emp5
+
+9 directories, 2 files
+yasin786@yasin:~/2121$ touch dcst ../2121/B1/M1/ 
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── dcst
+├── emp1
+└── emp5
+
+9 directories, 3 files
+yasin786@yasin:~/2121$ rm dcst
+yasin786@yasin:~/2121$ cd B1/M1
+yasin786@yasin:~/2121/B1/M1$ ls
+yasin786@yasin:~/2121/B1/M1$ touch dcst
+yasin786@yasin:~/2121/B1/M1$ ls
+dcst
+yasin786@yasin:~/2121/B1/M1$ tree
+.
+└── dcst
+
+0 directories, 1 file
+yasin786@yasin:~/2121/B1/M1$ cd ../..
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+└── emp5
+
+9 directories, 3 files
+yasin786@yasin:~/2121$ rm dcst
+rm: cannot remove 'dcst': No such file or directory
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+└── emp5
+
+9 directories, 3 files
+yasin786@yasin:~/2121$ touch B1/M1 dcst
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── dcst
+├── emp1
+└── emp5
+
+9 directories, 4 files
+yasin786@yasin:~/2121$ rm dcst
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+└── emp5
+
+9 directories, 3 files
+yasin786@yasin:~/2121$ touch dcst1 /home/yasin786/2121/B1/M1/
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── dcst1
+├── emp1
+└── emp5
+
+
+yasin786@yasin:~/2121$ cd B1/M1/
+yasin786@yasin:~/2121/B1/M1$ touch dcst
+yasin786@yasin:~/2121/B1/M1$ cat > dcst
+Department of computer science
+yasin786@yasin:~/2121/B1/M1$ cat dcst
+Department of computer science
+yasin786@yasin:~/2121/B1/M1$ cd ../..
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+└── emp5
+
+9 directories, 3 files
+yasin786@yasin:~/2121$ mkdir L2
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+├── emp5
+└── L2
+
+10 directories, 3 files
+yasin786@yasin:~/2121$ cp dcst /L2/newdcst
+cp: cannot stat 'dcst': No such file or directory
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+├── emp5
+└── L2
+
+10 directories, 3 files
+yasin786@yasin:~/2121$ cd B1/M1/
+yasin786@yasin:~/2121/B1/M1$ ls
+dcst
+yasin786@yasin:~/2121/B1/M1$ cp dcst ../../L2/newdcst
+yasin786@yasin:~/2121/B1/M1$ tree
+.
+└── dcst
+
+0 directories, 1 file
+yasin786@yasin:~/2121/B1/M1$ cd ../..
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── emp1
+├── emp5
+└── L2
+    └── newdcst
+
+10 directories, 4 files
+yasin786@yasin:~/2121$ 
+├── B1
+│   ├── M1
+│   │   └── dcst1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 11 files
+yasin786@yasin:~/2121$ cp L2/d? D1/
+cp: cannot stat 'L2/d?': No such file or directory
+yasin786@yasin:~/2121$ cp L2/d?? D1/
+cp: cannot stat 'L2/d??': No such file or directory
+yasin786@yasin:~/2121$ cp L2/d??? D1/
+cp: cannot stat 'L2/d???': No such file or directory
+yasin786@yasin:~/2121$ cp L2/d???? D1/
+cp: cannot stat 'L2/d????': No such file or directory
+yasin786@yasin:~/2121$ cp L2/d????? D1/
+yasin786@yasin:~/2121$ ls
+B1  B2  B3  D1  dir  emp1  emp5  L1  L2  unigoa-dcst
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 13 files
+yasin786@yasin:~/2121$ touch L2/status L2/strawberry 
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── status
+│   ├── strawberry
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 15 files
+yasin786@yasin:~/2121$ rm L2/s*
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 13 files
+yasin786@yasin:~/2121$ touch strawberry status
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+├── status
+├── strawberry
+└── unigoa-dcst
+
+13 directories, 15 files
+yasin786@yasin:~/2121$ rm s*
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   └── dcst1
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 13 files
+yasin786@yasin:~/2121$ touch B1/M1/abc B1/M1/ios 
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 15 files
+yasin786@yasin:~/2121$ cp B1/M1/??? B1/
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 17 files
+yasin786@yasin:~/2121$ cp dir dir2
+cp: -r not specified; omitting directory 'dir'
+yasin786@yasin:~/2121$ cp -R dir dir2
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── dir2
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+14 directories, 18 files
+yasin786@yasin:~/2121$ rm dir2/unigoa
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── dir2
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+14 directories, 17 files
+yasin786@yasin:~/2121$ rmdir dir2
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 17 files
+yasin786@yasin:~/2121$ mv dir1 dir2
+mv: cannot stat 'dir1': No such file or directory
+yasin786@yasin:~/2121$ mv -R dir1 dir2
+mv: invalid option -- 'R'
+Try 'mv --help' for more information.
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 17 files
+yasin786@yasin:~/2121$ cpdir dir1 dir2
+bash: cpdir: command not found
+yasin786@yasin:~/2121$ mv dir1 dir2
+mv: cannot stat 'dir1': No such file or directory
+yasin786@yasin:~/2121$ mv -R dir1 dir2
+mv: invalid option -- 'R'
+Try 'mv --help' for more information.
+yasin786@yasin:~/2121$ cp dir1 dir2
+cp: cannot stat 'dir1': No such file or directory
+yasin786@yasin:~/2121$ cp dir dir2
+cp: -r not specified; omitting directory 'dir'
+yasin786@yasin:~/2121$ mv dir dir2
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir2
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 17 files
+yasin786@yasin:~/2121$ mv dir2 dir
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 17 files
+yasin786@yasin:~/2121$ cp dir dir1
+cp: -r not specified; omitting directory 'dir'
+yasin786@yasin:~/2121$ cp -R dir dir1
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── dir1
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+14 directories, 18 files
+yasin786@yasin:~/2121$ rmdr dir1
+bash: rmdr: command not found
+yasin786@yasin:~/2121$ rmdir dir1
+rmdir: failed to remove 'dir1': Directory not empty
+yasin786@yasin:~/2121$ rm dir1/unigoa
+yasin786@yasin:~/2121$ rmdir dir1
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+13 directories, 17 files
+yasin786@yasin:~/2121$ mkdir 2
+yasin786@yasin:~/2121$ tree
+.
+├── 2
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+14 directories, 17 files
+yasin786@yasin:~/2121$ rmdir 2
+yasin786@yasin:~/2121$ mkdir dir2
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── dir2
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+14 directories, 17 files
+yasin786@yasin:~/2121$ cp -R dir dir2
+yasin786@yasin:~/2121$ tree
+.
+├── B1
+│   ├── abc
+│   ├── ios
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── dir2
+│   └── dir
+│       └── unigoa
+├── emp1
+├── emp5
+├── L1
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+└── unigoa-dcst
+
+15 directories, 18 files
+yasin786@yasin:~/2121$ cd ..
+yasin786@yasin:~$ mkdir 2121-mca
+yasin786@yasin:~$ cd 2121-mca\
+> 
+yasin786@yasin:~/2121-mca$ mkdir 2121-mca/A/B/E/F 2121-mca/A/C/G 2121-mca/A/D
+mkdir: cannot create directory ‘2121-mca/A/B/E/F’: No such file or directory
+mkdir: cannot create directory ‘2121-mca/A/C/G’: No such file or directory
+mkdir: cannot create directory ‘2121-mca/A/D’: No such file or directory
+yasin786@yasin:~/2121-mca$ tree
+.
+
+0 directories, 0 files
+yasin786@yasin:~/2121-mca$ mkdir -p 2121-mca/A/B/E/F 2121-mca/A/C/G 2121-mca/A/D
+yasin786@yasin:~/2121-mca$ tree
+.
+└── 2121-mca
+    └── A
+        ├── B
+        │   └── E
+        │       └── F
+        ├── C
+        │   └── G
+        └── D
+
+8 directories, 0 files
+yasin786@yasin:~/2121-mca$ cd 2121-mca/
+yasin786@yasin:~/2121-mca/2121-mca$ cd ..
+yasin786@yasin:~/.local/share/Trash/files$ tree
+.
+├── 1lin1
+├── 2121-mca
+├── 2unix
+├── 3
+├── 5ios
+├── index.html
+├── index.html2
+├── linux lab ex 1.txt
+├── prog1
+├── prog1.c
+├── secret.2.exe
+├── secret.exe
+├── unix
+│   └── 2121
+│       ├── B1
+│       │   ├── M1
+│       │   ├── M2
+│       │   └── M3
+│       ├── B2
+│       │   ├── M4
+│       │   └── M5
+│       └── B3
+│           └── M6
+└── wind
+
+12 directories, 12 files
+yasin786@yasin:~/.local/share/Trash/files$ cd ~
+yasin786@yasin:~$ cd 2121-mca\
+> 
+yasin786@yasin:~/2121-mca$ 
+yasin786@yasin:~/2121-mca$ tree
+.
+└── A
+    ├── B
+    │   └── E
+    │       └── F
+    ├── C
+    │   └── G
+    └── D
+
+7 directories, 0 files
+yasin786@yasin:~/2121-mca$ cd A/B/E/F
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+
+0 directories, 0 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ cat ../../../../D/ > context.txt
+cat: ../../../../D/: No such file or directory
+yasin786@yasin:~/2121-mca/A/B/E/F$ cat ../../../../D/ > context.txt
+cat: ../../../../D/: No such file or directory
+yasin786@yasin:~/2121-mca/A/B/E/F$ cat ../../../D/ > context.txt
+cat: ../../../D/: Is a directory
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+└── context.txt
+
+0 directories, 1 file
+yasin786@yasin:~/2121-mca/A/B/E/F$ rm context.txt
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+
+0 directories, 0 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ cat ../../../D/ > context.txt
+cat: ../../../D/: Is a directory
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+└── context.txt
+
+0 directories, 1 file
+yasin786@yasin:~/2121-mca/A/B/E/F$ rm context.txt
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+
+0 directories, 0 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ cat ../../../D/ context.txt
+cat: ../../../D/: Is a directory
+cat: context.txt: No such file or directory
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+
+0 directories, 0 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ cat ../../../D/ > context
+cat: ../../../D/: Is a directory
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+└── context
+
+0 directories, 1 file
+yasin786@yasin:~/2121-mca/A/B/E/F$ rm context
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+
+0 directories, 0 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ cat > ../../../D/context.txt
+hey!!
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+
+0 directories, 0 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ mv ../../../D/context.txt ../../../C/
+yasin786@yasin:~/2121-mca/A/B/E/F$ cd ../../../..
+yasin786@yasin:~/2121-mca$ tree
+.
+└── A
+    ├── B
+    │   └── E
+    │       └── F
+    ├── C
+    │   ├── context.txt
+    │   └── G
+    └── D
+
+7 directories, 1 file
+yasin786@yasin:~/2121-mca$ cd A/B/E/F
+yasin786@yasin:~/2121-mca/A/B/E/F$ pwd
+/home/yasin786/2121-mca/A/B/E/F
+yasin786@yasin:~/2121-mca/A/B/E/F$ touch alpha elepha ios unix bd
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── alpha
+├── bd
+├── elepha
+├── ios
+└── unix
+
+0 directories, 5 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ mv *[a,e,i,o,u]* ../../../
+yasin786@yasin:~/2121-mca/A/B/E/F$ cd ../../../..
+yasin786@yasin:~/2121-mca$ tree
+.
+└── A
+    ├── alpha
+    ├── B
+    │   └── E
+    │       └── F
+    │           └── bd
+    ├── C
+    │   ├── context.txt
+    │   └── G
+    ├── D
+    ├── elepha
+    ├── ios
+    └── unix
+
+7 directories, 6 files
+yasin786@yasin:~/2121-mca$ cd A/B/E/F/
+yasin786@yasin:~/2121-mca/A/B/E/F$ touch ex1 142linux
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── 142linux
+├── bd
+└── ex1
+
+0 directories, 3 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ rm ?[0-9]* 
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── bd
+└── ex1
+
+0 directories, 2 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ rm ?[0-9] 
+rm: cannot remove '?[0-9]': No such file or directory
+yasin786@yasin:~/2121-mca/A/B/E/F$ rm *[0-9]* 
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+└── bd
+
+0 directories, 1 file
+yasin786@yasin:~/2121-mca/A/B/E/F$ touch unix spli abc delta
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── abc
+├── bd
+├── delta
+├── spli
+└── unix
+
+0 directories, 5 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ rm ????[a-z]
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── abc
+├── bd
+├── spli
+└── unix
+
+0 directories, 4 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ touch delta
+yasin786@yasin:~/2121-mca/A/B/E/F$ rm ????
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── abc
+├── bd
+└── delta
+
+0 directories, 3 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ touch spli unix
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── abc
+├── bd
+├── delta
+├── spli
+└── unix
+
+0 directories, 5 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ rm [a-z]????
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── abc
+├── bd
+├── spli
+└── unix
+
+0 directories, 4 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ touch delta
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── abc
+├── bd
+├── delta
+├── spli
+└── unix
+
+0 directories, 5 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ rm [a-z]???
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── abc
+├── bd
+└── delta
+
+0 directories, 3 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ touch 1expo bs1test 240charlie
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── 1expo
+├── 240charlie
+├── abc
+├── bd
+├── bs1test
+└── delta
+
+0 directories, 6 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ mv [0-9]* ../../../
+yasin786@yasin:~/2121-mca/A/B/E/F$ cd ../../..
+yasin786@yasin:~/2121-mca/A$ tree
+.
+├── 1expo
+├── 240charlie
+├── alpha
+├── B
+│   └── E
+│       └── F
+│           ├── abc
+│           ├── bd
+│           ├── bs1test
+│           └── delta
+├── C
+│   ├── context.txt
+│   └── G
+├── D
+├── elepha
+├── ios
+└── unix
+
+6 directories, 11 files
+yasin786@yasin:~/2121-mca/A$ cd B/E/F
+yasin786@yasin:~/2121-mca/A/B/E/F$ cp ../..
+cp: missing destination file operand after '../..'
+Try 'cp --help' for more information.
+yasin786@yasin:~/2121-mca/A/B/E/F$ cp abc bd bs1test delta ../..
+yasin786@yasin:~/2121-mca/A/B/E/F$ tree
+.
+├── abc
+├── bd
+├── bs1test
+└── delta
+
+0 directories, 4 files
+yasin786@yasin:~/2121-mca/A/B/E/F$ cd ../../
+yasin786@yasin:~/2121-mca/A/B$ tree
+.
+├── abc
+├── bd
+├── bs1test
+├── delta
+└── E
+    └── F
+        ├── abc
+        ├── bd
+        ├── bs1test
+        └── delta
+
+2 directories, 8 files
+yasin786@yasin:~/2121-mca/A/B$ cd ../..
+yasin786@yasin:~/2121-mca$ tree
+.
+└── A
+    ├── 1expo
+    ├── 240charlie
+    ├── alpha
+    ├── B
+    │   ├── abc
+    │   ├── bd
+    │   ├── bs1test
+    │   ├── delta
+    │   └── E
+    │       └── F
+    │           ├── abc
+    │           ├── bd
+    │           ├── bs1test
+    │           └── delta
+    ├── C
+    │   ├── context.txt
+    │   └── G
+    ├── D
+    ├── elepha
+    ├── ios
+    └── unix
+
+7 directories, 15 files
+yasin786@yasin:~/2121-mca$ 
+
