@@ -885,6 +885,50 @@ yasin786@yasin:~/2121$ tree
 └── unigoa-dcst
 
 13 directories, 13 files
+===========================
+yasin786@yasin:~/2121/dir$ cp ../B1/M1/??[a-z] ../
+yasin786@yasin:~/2121/dir$ cd ..
+yasin786@yasin:~/2121$ tree
+.
+├── abc
+├── B1
+│   ├── M1
+│   │   ├── abc
+│   │   ├── dcst1
+│   │   └── ios
+│   ├── M2
+│   └── M3
+├── B2
+│   ├── M4
+│   └── M5
+├── B3
+│   └── M6
+├── D1
+│   ├── distav
+│   └── drinks
+├── dir
+│   └── unigoa
+├── dir2
+│   ├── dir
+│   │   └── unigoa
+│   └── unigoa
+├── emp1
+├── emp5
+├── ios
+├── L1
+│   ├── delta
+│   └── Linuxkali
+├── L2
+│   ├── distav
+│   ├── diwastate
+│   ├── drinks
+│   ├── Ubantu
+│   └── windows
+├── unigoa-dcst
+└── unogoadcst
+
+15 directories, 21 files
+
 
 ====================
 
