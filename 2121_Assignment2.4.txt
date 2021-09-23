@@ -1,0 +1,85 @@
+CSC 107 Linux Lab
+Roll No: 2121
+Batch Number: Batch II
+Activity: Assignment 2.4
+======================================================================================================
+Solutions:-
+
+
+
+1.
+ln -s abc mysymlink
+ls -l 
+(lrwxrwxrwx 1 yasin786 yasin786    3 Sep 21 11:15 mysymlink -> abc
+)
+
+
+
+
+2.
+ln abc hardlink
+ls -l
+
+
+
+
+
+
+3.
+sudo chown usr12 mca[0-9][0-9][0-9][0-9]
+ls -l mca[0-9][0-9][0-9][0-9]
+(-rw-r--r-- 1 usr12 yasin786 0 Sep 22 12:12 mca7867)
+
+
+
+
+
+
+4.
+sudo chgrp usr12 abc.txt
+ls -l abc.txt
+(-rw-r--r-- 1 yasin786 usr12 24 Sep 21 11:23 abc.txt)
+
+
+
+
+
+
+5.
+zip myzip.zip B1 B2 B3
+{adding: B1/ (stored 0%)}
+{adding: B2/ (stored 0%)}
+{adding: B3/ (stored 0%)}
+
+gzip -v g1 g2 g3
+g1:     -11.8% -- replaced with g1.gz
+g2:       0.0% -- replaced with g2.gz
+g3:      -8.7% -- replaced with g3.gz
+
+
+
+Difference between gzip and zip
+Zip compreses multiple files into a single indivisual file.
+whereas gzip compresses multiple files into seperate zip folders for each file.
+
+
+
+
+
+
+
+
+6.
+tar -cf myC.tar *.c
+
+(cat myC.tar
+
+p1.c0000644000175000017500000000003214122544322011276 0ustar  yasin786yasin786this is me
+yasin
+mca
+2121
+p2.c0000644000175000017500000000001514122544354011305 0ustar  yasin786yasin786its me yasin
+p3.c0000644000175000017500000000002214122544410011275 0ustar  yasin786yasin786hello
+line2
+line3)
+
