@@ -1,0 +1,133 @@
+CSC 107 Linux Lab
+Roll No: 2121
+Batch Number: Batch II
+Activity: Assignment 3.1
+======================================================================================================
+Solutions:-
+
+
+1.
+wc -w abc.txt
+(10 abc.txt)
+
+
+
+2.
+wc -L abc.txt
+(17 abc.txt)
+
+
+
+
+3.
+sort abc.txt | uniq
+
+
+
+
+4.
+a.
+grep -o -i apple fruit | wc -l 
+(2)
+grep -o -i banana fruit | wc -l 
+(2)
+grep -o -i strawberry fruit | wc -l 
+(1)
+grep -o -i jackfruit fruit | wc -l 
+(1)
+grep -o -i grapes fruit | wc -l 
+(1)
+
+
+b.
+sort fruit | uniq
+
+
+
+
+5.
+a.
+comm -12 <(sort Delta.txt) <(sort Max.txt)
+(123 rahul 10000
+234 yasin 30000
+empno name salary)
+
+b.
+comm -13 Max.txt Delta.txt
+(23 vishal 12000)
+
+
+
+
+6.
+diff f1.txt f2.txt
+
+
+
+7.
+a.
+sort -n std.txt
+(rollno name marks
+101 yasin 150
+102 vishal 110
+103 ravi 120
+108 atul 170)
+
+
+b.
+sort -n std.txt > sort.txt
+cat sort.txt
+(rollno name marks
+101 yasin 150
+102 vishal 110
+103 ravi 120
+108 atul 170)
+
+
+
+
+
+
+8.
+head -14 f1.txt | tail -10 
+
+
+
+
+9.
+head -1 f1.txt | tail -1 | wc -w
+
+
+
+
+
+10.
+cat abc.txt | grep -v ^$ | wc -l
+(4)
+
+
+
+
+11.
+ls -shld * | head -n 1
+(4.0K -rw-r--r-- 1 yasin786 yasin786   65 Sep 24 15:21 abc.txt)
+
+
+
+
+12.
+head -3 data.txt | cut -d " " -f 5 | tail -1
+(of)
+
+
+
+
+
+
+
+
+
+
+
+
+
