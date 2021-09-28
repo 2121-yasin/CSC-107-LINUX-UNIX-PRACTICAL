@@ -1,0 +1,87 @@
+CSC 107 Linux Lab
+Roll No: 2121
+Batch Number: Batch II
+Activity: Assignment 3.2
+======================================================================================================
+Solutions:-
+
+
+
+
+1.
+grep welcome data.txt
+
+
+
+
+2.
+grep -E '^\^.*\$$' data.txt
+(^apple$)
+
+
+3.
+grep -ci 'delhi' *
+
+
+
+
+
+4.
+ls -l | grep 'July'
+
+
+
+
+5.
+ls -l | grep -c 'student'
+
+
+
+
+
+6.
+ls | grep -wl 'University'*
+
+
+
+7.
+grep '^[A-Z][0-9][a-z]*' data.txt
+
+
+
+8.
+ls -l | grep '^.r*'
+
+
+
+9.
+head -3 data.txt | grep 'welcome'
+
+
+10.
+grep -Ev '[a-zA-Z]{4}' data.txt
+
+
+
+11.
+grep -E 'S{,2}I{,1}G{,1}T{,1}O{,1}P{,1}' data.txt
+
+
+
+
+12.
+grep -E '^.{5}$' data.txt
+
+
+
+14.
+grep -E 'run ?-?time' data.txt
+
+
+
+15.
+grep -E '[[:alnum:]]*\+*\-*\_*[[:alnum]]*@unigoa.ac.in$' employees
+
+
+
+
