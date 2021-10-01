@@ -1,0 +1,82 @@
+CSC 107 Linux Lab
+Roll No: 2121
+Batch Number: Batch II
+Activity: Assignment 3.3
+======================================================================================================
+Solutions:-
+
+
+
+1.
+sed -n 'n;p' data.txt
+
+
+
+2.
+sed -n '2,4p;8,11p' data.txt
+
+
+
+3.
+sed -n '8,$p' data.txt
+
+
+4.
+sed '$d' data.txt
+
+
+
+5.
+sed '/this/d' data.txt
+
+
+
+6.
+sed '/^[\&\*\@\%\{\+]/d' data.txt
+
+
+
+
+7.
+sed '3,7!d' data.txt
+
+
+
+
+8.
+sed 's/...$//' data.txt
+
+
+
+9.
+sed '/[.]$/!s/$/./' data.txt
+
+
+10.
+sed 's/unix/linux/2' data.txt
+
+
+11.
+sed 's/MTech/M.Tech/;s/MTECH/M.Tech/;s/M.TECH/M.Tech/;s/M.tech/M.Tech/' data.txt
+
+
+12.
+sed 's/ \+/ /g' data.txt
+
+
+13.
+sed 's/.\{0\}/& (/ ; s/.\{6\}/&)-/' tele.txt
+
+
+
+14.
+sed '/DCST/ s/$/ \"hello dcst\"/' data.txt
+
+
+
+15.
+sed -n '/[0-9]/=' data.txt
+
+
+
+
