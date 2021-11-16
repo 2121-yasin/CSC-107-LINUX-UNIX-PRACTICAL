@@ -19,3 +19,29 @@ while [[ ! $PhoneNumber =~ $pat ]] do
 echo "Please enter phone number as XXXXXXXX: " read PhoneNumber
 done
 echo $PhoneNumber
+
+
+
+#include <errno.h>
+#include <sys/stat.h>
+#include <stdio.h>
+#include <stdlib.h>
+​
+int main(void)
+{
+struct stat statbuf;
+​
+if (stat("abc", &statbuf) < 0)
+perror("stat error for file.txt");
+​
+if (chmod("abc", (statbuf.st_mode | S_IXGRP )) < 0)
+perror("chmod error for abc");
+​
+/* set absolute mode to "rw-r--r--" */
+if (chmod("newfile.txt", S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH) < 0)
+perror("chmod error for newfile.txt");
+​
+if(chmod("xyz", 0777)<0)
+perror("chmod error for nxyz");
+return 0;
+}
